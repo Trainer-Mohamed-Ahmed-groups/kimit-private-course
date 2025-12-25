@@ -1,68 +1,238 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 :root {
-    --primary-color: #17ff13;
+    scroll-behavior: smooth;
 }
 body {
     height: 5000px;
     margin: 0;
 }
+
 * {
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
 }
-/* div {
-    color: var(--primary-color);
-    background-color: rgb(255, 199, 17);
-} */
-#customId {
-    color: rgb(0, 255, 255);
-    font-size: 2rem;
-}
-.parent {
-    background-color: var(--primary-color);
-    height: 500px;
-    width: 500px;
-    font-size: 1.5rem;
-}
-.customClass {
-    color: var(--primary-color);
-    height: 25vh;
-    width: 50%;
+
+/* Combinator selectors (space)  >  +   ~  */
+.child {
     font-weight: bold;
-    font-style: italic;
-    font-size: 16px;
+    color: red;
 }
-/* Comment */
-.bg_explain {
-    height: 500px;
-    background-image: url(../images/surf.jpg);
-    background-repeat: no-repeat;
-    /* background-position: bottom right; */
-    background-size: cover;
-    background-attachment: fixed;
-    /* background: url(../images/surf.jpg) no-repeat bottom right; */
+
+/* Pseudo class */
+
+section {
+    height: 800px;
 }
-.gradient {
+:target {
+    border: 2px solid darkorange;
+    background-color: beige;
+}
+.test {
+    text-indent: 25px;
+    line-height: 30px;
+    word-spacing: 10px;
+    letter-spacing: 5px;
+}
+p.test::first-line {
+    font-size: 2rem;
+    color: red;
+}
+p.test::selection {
+    background-color: aqua;
+    color: red;
+}
+ul li {
+    list-style: arabic-indic inside;
+    background-color: blueviolet;
+}
+ul li::marker {
+    color: blue;
+}
+.pseudo::before {
+    content: "";
+    height: 10px;
+    width: 10px;
+    background-color: #999;
+    border-radius: 50%;
+    display: inline-block;
+}
+a[target="_blank"] {
+    font-weight: bold;
+}
+.show {
     height: 300px;
     width: 300px;
-    /* background-image: linear-gradient(45deg, black 17%, #eee); */
-    /* background-image: repeating-linear-gradient(black, #eee 50%); */
-    background-image: repeating-radial-gradient(black, #eee 10%);
-    /* background-image: conic-gradient(black, #ff0000); */
+    background-color: bisque;
+    /* display: none; */
+    visibility: hidden;
 }
-.border {
+.myP {
+    text-shadow: 5px 5px 5px green;
+}
+.myP span {
     height: 200px;
     width: 200px;
-    /* border-width: 10px;
-    border-style: solid;
-    border-color: var(--primary-color); */
-    border: 10px solid var(--primary-color);
+    margin: 30px;
+    background-color: red;
+    display: inline-block;
+    box-shadow: inset 4px 7px 16px 13px #0f0;
 }
-.radius {
-    height: 150px;
+table {
+    border-collapse: collapse;
+    caption-side: bottom;
+}
+table,
+th,
+td {
+    border: 2px solid #575757;
+}
+.newParent div {
+    float: left;
+}
+h2 {
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+.newParent::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.relative {
+    height: 400px;
+    width: 400px;
+    background-color: aquamarine;
+    position: relative;
+}
+.position {
+    height: 100px;
+    width: 100px;
+    background-color: #e9e9e9;
+}
+.absolute {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.absolute:first-child {
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+    background-color: red;
+}
+.absolute:nth-child(2) {
+    top: 50px;
+    z-index: 1;
+    right: 50px;
+    background-color: rgb(30, 231, 47);
+}
+.fixed {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+.sticky {
+    position: sticky;
+    top: 0;
+}
+.over {
+    height: 250px;
+    width: 250px;
+    background-color: #999;
+    overflow: auto;
+}
+.transformExplain {
+    height: 200px;
+    width: 200px;
+    background-color: brown;
+    transition: 1s;
+    margin: auto;
+}
+.transformExplain:hover {
+    /* translate: 100px; */
+    /* transform: translateY(-100px); */
+    /* transform: rotateZ(45deg); */
+    /* transform: skew(45deg); */
+    transform: scale(1.5);
+}
+.card {
+    height: 250px;
     width: 150px;
-    background-color: #eee;
-    border-radius: 10px;
-    margin-inline-start: 20px;
-    padding: 10px;
+    position: relative;
+    transition: 1s;
+    backface-visibility: hidden;
+}
+.card:hover {
+    transform: rotateY(180deg);
+}
+.front,
+.back {
+    position: absolute;
+    inset: 0;
+    /* top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; */
+}
+
+.front {
+    background-color: #f00;
+}
+.back {
+    background-color: #00f;
+    transform: rotateY(180deg);
+}
+.transition {
+    height: 200px;
+    width: 200px;
+    background-color: chartreuse;
+    margin-top: 50px;
+    transition-property: all;
+    transition-duration: 5s;
+    /* transition-delay: 1000ms; */
+    transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+    transition: all 0.5s ease-in-out 1s;
+}
+.transition:hover {
+    width: 300px;
+    height: 300px;
+}
+
+.animationExplain {
+    height: 200px;
+    width: 200px;
+    background-color: rgb(13, 201, 235);
+    margin-top: 50px;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: firstAnimation 2s ease-out 1s 4;
+    animation-fill-mode: forwards;
+    /* animation-direction: alternate; */
+}
+.spinner {
+    height: 100px;
+    width: 100px;
+    border: 8px solid #0f0;
+    margin: 20px auto;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spinnerAnimation 1s infinite linear;
+}
+
+@keyframes firstAnimation {
+    25% {
+        transform: translate(100px, 0);
+    }
+    50% {
+        transform: translate(100px, 100px);
+    }
+    100% {
+        transform: translate(0, 100px);
+    }
+}
+@keyframes spinnerAnimation {
+    to {
+        transform: rotateZ(360deg);
+    }
 }

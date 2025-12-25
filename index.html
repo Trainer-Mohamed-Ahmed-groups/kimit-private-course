@@ -4,184 +4,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
     <meta name="icon" url="./images/surf.jpg">
     <title>Document</title>
-
-    <style>
-        body {
-            height: 5000px;
-        }
-    </style>
 </head>
 
 <body>
-    Hello Yahia
-    <div style="color:red">This is division</div>
-    <div>This is division</div>
-
-    <span>This is span</span>
-    <span>This is span</span>
-
-
-    <!-- This is comment => Headings -->
-
-    <h1>This is H1</h1>
-    <h2>This is H2</h2>
-    <h3>This is H3</h3>
-    <h4>This is H4</h4>
-    <h5>This is H5</h5>
-    <h6>This is H6</h6>
-
-    <img src="images/surf.jpg" alt="My image">
+    <a href="#targetOne">Target one</a>
+    <a href="#targetTwo">Target two</a>
+    <div class="parent">
+        <div class="child">This is child in parent</div>
+        <div class="test">
+            This is test
+            <div class="child">This is child in test</div>
+        </div>
+        <div>Hello</div>
+    </div>
 
 
-    <!-- ./ images ../ -->
+    <div class="child">This is child outside</div>
 
-    <blockquote>This is block quote</blockquote>
+
+    <!-- <section id="targetOne">This is target one</section>
+    <section id="targetTwo">This is target one</section> -->
+
+    <p class="test">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus culpa officiis facere. Perferendis
+        eveniet
+        officiis rem aut hic laborum dolore veritatis quasi? Hic illo quas soluta iste beatae molestiae quod.
+        In inventore qui pariatur dolor porro quasi cupiditate tempore, commodi vero? Odio nulla, beatae, itaque ratione
+        unde dolores, velit ipsa possimus saepe consequuntur quidem. Saepe perspiciatis dolore possimus omnis unde.
+        Nesciunt laudantium dignissimos praesentium saepe adipisci voluptas maxime aut ratione sequi velit vitae minus
+        totam neque, quia temporibus eos, tempora nisi accusantium? Vero deserunt non odit nobis quibusdam labore
+        impedit.
+        Porro, magni molestiae. Odio placeat possimus fugiat mollitia nisi eum explicabo iure dolorum reprehenderit.
+        Mollitia magni magnam iure laboriosam dolorem reprehenderit error quasi debitis et. Repudiandae, minima nostrum.
+        Facilis, exercitationem!
+        Laudantium eum nesciunt, culpa ad corporis architecto obcaecati aut dolorum suscipit doloribus illum vel?
+        Similique natus aliquid cum laboriosam dignissimos beatae neque praesentium saepe! Consequuntur numquam eos
+        voluptatibus ipsa odit.</p>
+
+
+    <ul>
+        <li>Test </li>
+        <li>Test </li>
+        <li>Test </li>
+        <li>Test </li>
+    </ul>
+
+    <div class="pseudo">This is test</div>
+
+
+    <a href="#" target="_blank">Click here</a>
+    <a href="#" target="_self">Click here</a>
+    <i class="fa-brands fa-instagram"></i>
+
     <hr>
+    <div class="show"></div>
+    This content outside
 
-    <a href="https://www.google.com">click here</a>
-    <a href="https://www.google.com" target="_blank">click here</a>
-    <a href="tel:123456789">Call now</a>
-    <a href="sms:123456789">Sms now</a>
-    <a href="http://wa.me/123456789">Call now</a>
-    <a href="mailto:abc@kimit.com">Mail now</a>
+    <p class="myP">Lorem ipsum, dolor sit amet consectetur adipisicing elit. <span>This is content</span> quia
+        aspernatur blanditiis laudantium reprehenderit nihil, eum cumque consequuntur incidunt dolores totam esse libero
+        magni consectetur odio quidem pariatur eius temporibus.</p>
 
-    <hr>
-    <table border="">
-        <caption>Employees</caption>
+    <table>
+        <caption>Data</caption>
         <tr>
             <th>Name</th>
-            <th colspan="2">Age</th>
+            <th>age</th>
         </tr>
         <tr>
             <td>Ali</td>
-            <td>20</td>
-            <td rowspan="2">Male</td>
-        </tr>
-        <tr>
-            <td>Khaled</td>
             <td>30</td>
         </tr>
     </table>
+    <hr>
+    <div class="newParent">
+        <div>test 1</div>
+        <div>test 2</div>
+        <div>test 3</div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolorem vero maiores vitae distinctio quisquam
+        cumque laborum natus perspiciatis a, deleniti animi officia. Consequatur obcaecati sequi accusantium consectetur
+        architecto harum.</p>
 
     <hr>
-    <!-- Formatting elements -->
-    <i>Italic</i><em>Italic</em> <br>
-    <b>Bold</b> <strong>Bold</strong> <br>
-    <mark>This is marked</mark><br>
-    <ins>This is underline</ins> <br>
-    <del>This is deleted</del> <s>This is deleted</s> <br>
-    <small>This is small text</small> <br>
-    <span>9 <sub>99</sub></span>
-    <span>9 <sup>99</sup></span>
+    <h2>Position explain</h2>
+    <div class="relative">
+        <div class="position absolute">Absolute 1</div>
+        <div class="position absolute">Absolute 2</div>
+        <div class="position absolute">Absolute 3</div>
+    </div>
+    <div class="position fixed">Fixed</div>
+    <div class="position sticky">Sticky</div>
+
+    <p class="over">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere at ducimus labore! Sed consectetur
+        atque,
+        eligendi iusto porro hic. Rem doloribus inventore dicta dolorum quisquam commodi aspernatur reiciendis. Vitae,
+        enim!
+        Voluptate facere, rerum saepe porro similique repudiandae, vel a placeat, voluptatem quo odit nemo fugit ipsum?
+        Quaerat excepturi facere nemo porro, amet doloremque dolore ea delectus, fugiat, fuga modi corporis!</p>
 
     <hr>
-    <yahia>This is Yahia</yahia>
-    <hr>
-    <!-- Computer code elements  -->
-    <h2>Computer code elements</h2>
-    <code>This is code</code>
-    <kbd>This is code</kbd>
-    <samp>This is code</samp>
-    <var>This is var</var>
-    <pre>This             is            Preformatted text</pre>
-    <hr>
-    <button>Click me</button>
-    <hr>
-    <!-- Semantic elements -->
-    <h2>Semantic elements</h2>
-    <article>This is article</article>
-    <nav>This is nav</nav>
-    <footer>This is footer</footer>
-    <aside>This is a side</aside>
-    <header>This is header</header>
-    <section>This is section</section>
-    <main>This is main</main>
-    <details>
-        <summary>This is summary</summary>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum culpa quia molestias. Quasi expedita quaerat
-            nesciunt suscipit eius necessitatibus esse praesentium, iste aperiam eaque animi nostrum, saepe debitis quae
-            officiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nisi laudantium similique, quod aut
-            omnis, soluta distinctio temporibus consectetur quasi quas obcaecati nesciunt! Ex, sit enim nulla magni rem
-            consequuntur.
-            Corporis, dolore quis id labore temporibus qui excepturi voluptatum laboriosam ratione odio, harum ipsam
-            vero sit deserunt praesentium beatae provident voluptas quaerat, accusantium tempora nisi sint quod eos
-            quisquam! Inventore!
-            Quasi a non cum laudantium, accusantium similique unde reiciendis beatae. Eveniet doloremque omnis deserunt
-            rerum nulla officiis iure corporis modi minus, libero reiciendis ex, unde, facilis vero excepturi voluptates
-            neque?
-        </p>
-    </details>
-    <figure>
-        <img src="./images/surf.jpg" alt="My image">
-        <figcaption>This is description about this image</figcaption>
-    </figure>
-    <hr>
-    <h2>Lists</h2>
-    <ul>
-        <li>This is item</li>
-        <li>This is item</li>
-        <li>This is item</li>
-    </ul>
 
-    <ol>
-        <li>This is item</li>
-        <li>This is item</li>
-        <li>This is item</li>
-    </ol>
+    <div class="transformExplain"></div>
 
-    <hr>
-    <form action="./thanks.html" method="GET">
-        <input type="text" name="username" maxlength="10" autofocus placeholder="Please enter your name"> <br><br>
-        <label for="userPassword">Password : </label>
-        <input type="password" id="userPassword"><br><br>
-        <input type="email" disabled value="yahia@kimit.com"><br><br>
-        <input type="color"><br><br>
-        <input type="search"><br><br>
-        <input type="file" accept=".jpg,.pdf,.jpeg" multiple><br><br>
-        <input type="number" min="0" max="10"><br><br>
-        <input type="date" name="reserveDate" min="2025-12-18" max="2025-12-28"><br><br>
-        <input type="week"><br><br>
-        <input type="month"><br><br>
-        <input type="time"><br><br>
-        <input type="datetime-local"><br><br>
-        <input type="range" name=""><br><br>
-        <input type="radio" value="Male" checked name="gender" id="male">
-        <label for="male">Male</label>
-        <input type="radio" value="Female" name="gender" id="female">
-        <label for="female">Female</label>
-        <br>
-        <input type="checkbox">
-        <input type="checkbox">
-        <br><br>
-        <select multiple>
-            <optgroup label="Frontend">
-                <option value="html">HTML</option>
-                <option value="css">CSS</option>
-            </optgroup>
-            <optgroup label="Backend">
-                <option value="node">Node</option>
-                <option value="express">Express</option>
-            </optgroup>
-        </select>
-        <br><br>
-        <textarea name="" rows="10" cols="30"></textarea>
-        <br><br>
-        <input type="reset" value="Reset">
-        <input type="submit" value="OK">
-    </form>
+    <div class="card">
+        <div class="back">Back</div>
+        <div class="front">Front</div>
+    </div>
+    <div class="transition"></div>
 
-    <progress max="10" value="4"></progress>
-    <dl>
-        <dt>This is title</dt>
-        <dd>This is for desc</dd>
-    </dl>
 
-    <p>This is يحيى <bdi>10</bdi></p>
+    <div class="animationExplain"></div>
 
-    <audio src="./audios/001.mp3" controls></audio>
-    <video src="./videos/1.mp4" controls muted autoplay loop></video>
+    <div class="spinner"></div>
 </body>
 
 </html>

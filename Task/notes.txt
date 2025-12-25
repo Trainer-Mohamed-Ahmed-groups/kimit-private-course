@@ -1,5 +1,0 @@
-1- In task 2 create one card only
-
-hints :
-margin:auto => To centralize a fixed width tag
-text-align:center => To centralize text
