@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
+
+:root {
+    --primary-color: #212934;
+    --green: #59ab6e;
+    --font: #24282b;
+    --secondary-font: #cfd6e1;
+    --third-font: #daccc8;
+    --bg: #efefef;
+    --gold: #ede861;
+    --gray-star: #bcbcbc;
+}
+body {
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+    font-family: "Cairo", "sans-serif";
+}
+
+.container {
+    width: 75%;
+    margin: auto;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+ul {
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+.flex {
+    display: flex;
+}
+.justify_between {
+    justify-content: space-between;
+}
+.items_center {
+    align-items: center;
+}
+/**************************************** Start header *****************************************/
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-font);
+    padding: 10px 0;
+    font-size: 0.8rem;
+}
+header .container div:first-child a:first-child {
+    margin-inline-end: 10px;
+}
+header span {
+    margin-inline-start: 3px;
+}
+/**************************************** End header *****************************************/
+/**************************************** Start Nav *****************************************/
+nav ul {
+    width: 50%;
+}
+nav ul a {
+    transition: 0.5s all ease-in-out;
+    text-transform: capitalize;
+}
+nav ul a:hover {
+    color: var(--green);
+}
+nav .icons {
+    gap: 10px;
+}
+nav .icon_container {
+    position: relative;
+}
+nav .icon_container span {
+    position: absolute;
+    top: -6px;
+    right: -11px;
+    background-color: var(--bg);
+    height: 20px;
+    min-width: 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.7rem;
+    padding: 0 5px;
+}
+/**************************************** end Nav *****************************************/
+.hero {
+    height: 80vh;
+    background: url(../images/banner_img_03.jpg) no-repeat 90% 40% var(--bg);
+    background-size: 50%;
+}
+.hero h1,
+.hero h2 {
+    font-weight: 300;
+    margin: 0;
+}
+.hero .container {
+    height: 100%;
+}
+.hero .flex {
+    height: 100%;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/**************************************** Media *****************************************/
+@media (max-width: 600px) {
+    header .flex,
+    nav > .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul {
+        width: 100%;
+    }
+    nav .icons {
+        gap: 30px;
+    }
+    .hero .flex {
+        width: 100%;
+    }
+}
