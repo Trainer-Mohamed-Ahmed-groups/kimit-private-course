@@ -1,162 +1,88 @@
 "use strict";
-// Object
-var car = {
-    model: 2025,
-    name: "Mercedes C300",
-    country: "Germany",
-    isSold: true,
-    owner: undefined,
-    features: ["Turbo", "10 airbags", "ABS"]
-    // Key : value
-}
+var employees = [
+    { name: "Alice", age: 30, department: "HR" },
+    { name: "Bob", age: 25, department: "Engineering" },
+    { name: "Charlie", age: 35, department: "Sales" }
+];
 
-console.log(car)
-console.log(typeof car)
-// Bracket notation
-console.log(car["country"])
-console.log(car["features"][2])
-// Dot notation
-console.log(car.name)
-console.log(car.features[2])
+var newCustomer = { name: "Charlie", age: 35, department: "Sales" }
 
+var i = 0;
 
-// VOID function
-function firstFn() {
-    console.log("Hello function")
-}
-console.log(typeof firstFn)
-
-
-firstFn()
-firstFn()
-
-// Returning value function
-function calc() {
-    return 5 + 5
-}
-
-console.log(calc())
-
-
-// function calc2(x = 0, y = 0) {
-//     return x + y
+// while (i < 10) {
+//     console.log(i)
+//     i++;
 // }
 
-// var calc2 = function (x = 0, y = 0) {
-//     return x + y
-// }
+// do {
+//     console.log(i)
+//     i++
+// } while (i< 10);
 
-var calc2 = (x = 0, y = 0) => x + y
 
-console.log(calc2(10, 5))
-console.log(calc2(108, 513))
-console.log(calc2(108))
-
-console.log(typeof NaN)
-
-console.log("****************************")
-/*         Control flow                 */
-var myNum = 0
-if (myNum > 0) {
-    console.log("Greater")
-} else if (myNum < 0) {
-    console.log("Lower")
+for (let j = 0; j < 10; j++) {
+    // if (j === 5) { break; }
+    if (j % 2 === 0) { continue }
+    console.log(j)
 }
-else {
-    console.log("Zero")
+console.log("*****************")
+for (let j = 2; j < 10; j += 2) {
+    console.log(j)
 }
+console.log("*****************")
 
-
-var y = 10;
-
-if (y !== '10') {
-    console.log("YES")
-} else {
-    console.log("NO")
+for (let index = 0; index < employees.length; index++) {
+    const element = employees[index];
+    console.log(element)
 }
-
-// Unary arithmetic operators ++ --
-var t = 10;
-console.log(++t)
-console.log(t--)
-console.log(t--)
-console.log(t)
-
-// Binary arithmetic operators + - * / %
-
-console.log(12 % 3)
-console.log(8 % 2)
-
-// Relational operators > < >= <= == === != !==
-
-// Assignment operators = += -= *= /= %=
-var e = 50;
-console.log(e)
-e += 10;
-console.log(e)
-
-
-// Logical operators ! && ||
-
-if (5 > 4 || 5 > 40) {
-    console.log("YES")
-} else {
-    console.log("NO")
+console.log("*****************")
+for (const employee of employees) {
+    console.log(employee)
 }
-
-console.log("first" && 50)
-console.log("first" && 0 && "OK")
-
-
-var p = "Mahmoud"
-
-switch (p) {
-    case "Mohamed":
-    case "Mahmoud":
-        console.log("first")
-        break;
-    case "Yahia": console.log("Second")
-        break;
-    default:
-        console.log("Other")
+console.log("*****************")
+for (const key in newCustomer) {
+    console.log(key + ": " + newCustomer[key])
 }
+console.log("*****************")
+var newArr = [1, 2, 3, 4].forEach(num => num * 2);
+console.log(newArr)
+console.log("*****************")
+var newArr2 = [1, 2, 3, 4].map(num => num * 2);
+console.log(newArr2)
+console.log("*****************")
 
-///////////////////////////////
-
-try {
-    // console.log(first);
-} catch (error) {
-    console.error(error.message)
-} finally {
-    console.log("Come")
+sayOk();
+// Declaration Function
+function sayOk() {
+    console.log("test 1")
 }
-
-
-
-console.log("Hello");
-
-
-function getRectArea(width, height) {
-    if (isNaN(width) || isNaN(height)) {
-        throw "Parameters is not valid"
-    }
-    else {
-        return width * height
-    }
+// Expression Function || Anonymous Function
+var sayOk2 = function () {
+    console.log("test 2")
 }
+sayOk2();
 
-console.log(getRectArea(8, 5))
+/************************* Type casting *******************************/
+var firstName = "Mohamed",
+    lastName = "Ahmed";
 
-try {
-    // console.log(getRectArea(8, "s"))
-    console.log(getRectArea(8, 2))
-} catch (error) {
-    console.error(error)
-}
+console.log(firstName + lastName) //Concatenation
+console.log(firstName + " " + lastName) //Concatenation with space
+console.log("*** Implicit ******");
 
-console.log("first")
-console.log(1 / 0)
+console.log(5 + "5")
+console.log(5 * "5")
+console.log(5 * "K")
+console.log(9 + true)
+console.log(9 + false)
+console.log("*** Explicit ******");
 
 
-q = 90;
-console.log(q)
+console.log(Number("5"))
+console.log(String(123))
+console.log(Boolean(1))
+console.log(Boolean(0))
+console.log(Boolean("Hello"))
+console.log(Boolean(""))
+console.log(parseInt("5.78"))
+console.log(parseFloat("5.78"))
