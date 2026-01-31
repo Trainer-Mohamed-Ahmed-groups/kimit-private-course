@@ -1,7 +1,9 @@
-.active {
-    background-color: #04aa6d;
-    color: white;
-}
-.hide {
-    display: none;
+.item {
+    background-color: #303030;
+    color: rgb(185, 185, 185);
+    border: 1px solid #292929;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    list-style-position: inside;
 }
