@@ -1,0 +1,48 @@
+/* CSS comment */
+* {
+  box-sizing: border-box;
+}
+
+section .test, section, div {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+div {
+  margin: 20px;
+}
+
+section {
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: rgb(0, 255, 34);
+  /*********************************** */
+  border: 2px solid;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  /*********************************** */
+}
+section .test {
+  text-transform: uppercase;
+}
+section .test a {
+  color: inherit;
+}
+section .test a:hover {
+  color: blue;
+}
+
+.contact {
+  color: rgb(0, 255, 34);
+  /*********************************** */
+  border: 2px solid;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  /*********************************** */
+}
+
+/*# sourceMappingURL=style.css.map */

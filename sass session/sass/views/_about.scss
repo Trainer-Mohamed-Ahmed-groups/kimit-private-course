@@ -1,0 +1,37 @@
+@use "../helpers/variables";
+@use "../helpers/mixins";
+
+%message-shared {
+    border: 1px solid #ccc;
+    padding: 10px;
+    color: #333;
+}
+
+div {
+    @extend %message-shared;
+    margin: 20px;
+}
+
+section {
+    border-radius: 10px;
+    @extend %message-shared;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: variables.$main-color;
+    /*********************************** */
+    @include mixins.defaultBorder(300px, 300px);
+    /*********************************** */
+
+    .test {
+        text-transform: uppercase;
+        @extend %message-shared;
+
+        a {
+            color: inherit;
+
+            &:hover {
+                color: blue;
+            }
+        }
+    }
+}

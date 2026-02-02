@@ -1,0 +1,9 @@
+@use "../helpers/variables";
+@use "../helpers/mixins";
+
+.contact {
+    color: variables.$main-color;
+    /*********************************** */
+    @include mixins.defaultBorder;
+    /*********************************** */
+}
